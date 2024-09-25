@@ -1,5 +1,6 @@
 package com.example.exception
 
-//Exception personnalisée levée lorsqu'un cours n'est pas trouvé.
 
 class CourseException : Exception()
+
+//Custom exception thrown when a course is not found.

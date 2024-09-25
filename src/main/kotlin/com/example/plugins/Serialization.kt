@@ -5,11 +5,6 @@ import io.ktor.server.application.*
 import io.ktor.server.plugins.contentnegotiation.*
 import kotlinx.serialization.json.Json
 
-// La sérialisation utilise Kotlinx Serialization pour gérer les données JSON dans les
-// réponses et les requêtes HTTP. Elle est configurée pour formater le JSON de manière lisible,
-// accepter des formats plus permissifs, et ignorer les champs inconnus lors
-// de la désérialisation des données.
-
 fun Application.configureSerialization() {
     install(ContentNegotiation) {
         json(Json {
@@ -24,3 +19,8 @@ fun Application.configureSerialization() {
             }
     }*/
 }
+
+// Serialization uses Kotlinx Serialization to handle JSON data in
+// responses and HTTP requests. It is configured to format JSON in a readable way,
+// accept more permissive formats, and ignore unknown fields when
+// data deserialization.

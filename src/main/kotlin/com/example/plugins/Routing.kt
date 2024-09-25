@@ -7,14 +7,6 @@ import io.ktor.server.application.*
 import io.ktor.server.http.content.*
 import io.ktor.server.routing.*
 
-//le routage défini les routes HTTP du serveur. Le serveur Ktor a plusieurs routes qui
-// répondent aux requêtes GET :
-//  / : Retourne un message de bienvenue défini dans Constants.WELCOME_MESSAGE.
-//  /course/top : Retourne le cours ayant le niveau le plus élevé à l'aide de
-//  CourseDao.getTopCourse().
-//  /course/{id} : Retourne un cours spécifique identifié par un id grâce à
-//  CourseDao.getCourseSafely(id).
-
 fun Application.configureRouting() {
     routing {
         // Utilisation de la fonction d'extension pour la page d'accueil
@@ -33,3 +25,11 @@ fun Application.configureRouting() {
         }
     }
 }
+
+//routing defines the server's HTTP routes. The Ktor server has several routes that
+// respond to GET requests:
+// / : Returns a welcome message defined in Constants.WELCOME_MESSAGE.
+// /course/top : Returns the course with the highest level using
+// CourseDao.getTopCourse().
+// /course/{id} : Returns a specific course identified by id using
+// CourseDao.getCourseSafely(id).

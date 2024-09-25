@@ -4,11 +4,6 @@ import io.ktor.http.*
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
 
-//Ces extensions définissent des façons pratiques d’ajouter des routes avec des paramètres.
-// Elles permettent de définir des chemins GET en répondant avec un texte, un modèle converti
-// en JSON, ou encore un modèle récupéré à partir d'un paramètre de la requête
-// (par exemple, un id de cours).
-
 /**
  * Builds a route to match `GET` requests with specified [path] showing specified [text]
  */
@@ -46,3 +41,8 @@ fun Route.get(path: String, param: String, getModel: (Int) -> Any) = route(path)
         }
     }
 }
+
+//These extensions define practical ways of adding routes with parameters.
+// They enable GET routes to be defined by responding with text, a template converted
+// to JSON, or a template retrieved from a request parameter
+// (for example, a course id).

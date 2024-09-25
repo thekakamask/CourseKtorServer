@@ -3,14 +3,6 @@ package com.example
 import com.example.plugins.*
 import io.ktor.server.application.*
 
-//Serveur principal :
-//main : C'est la fonction principale qui lance le serveur Ktor. Elle utilise le moteur Netty
-// pour démarrer le serveur, avec les configurations définies dans application.conf
-// ou en argument de ligne de commande.
-//Application.module() : Cette fonction est appelée lors du démarrage du serveur.
-// Elle configure les différents modules du serveur comme la surveillance (Monitoring),
-// la sérialisation (Serialization), et le routage (Routing).
-
 fun main(args: Array<String>) {
     io.ktor.server.netty.EngineMain.main(args)
 }
@@ -20,3 +12,11 @@ fun Application.module() {
     configureSerialization()
     configureRouting()
 }
+
+//Main server :
+//-main: This is the main function that launches the Ktor server. It uses the Netty
+// engine to start the server, with the configurations defined in application.conf
+// or as a command line argument.
+//-Application.module() : This function is called at server startup.
+// It configures the various server modules, such as monitoring,
+// Serialization, and Routing.
